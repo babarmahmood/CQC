@@ -1,0 +1,42 @@
+﻿@model QcsWeb.ViewModels.LightFeedbackVm
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+            What is your address?
+        </h1>
+    </legend>
+
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+            Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+        </label>
+        @Html.TextBoxFor(m => m.HomeAddress.BuildindAndStreet, new { id = "txtBuildingAndStreet", @class = "govuk-input" })
+    </div>
+
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+            Town or city
+        </label>
+
+        @Html.TextBoxFor(m => m.HomeAddress.TownOrCity, new { id = "txtTwonOrCity", @class = "govuk-input govuk-!-width-two-thirds" })
+    </div>
+
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="address-county">
+            County
+        </label>
+        @Html.TextBoxFor(m => m.HomeAddress.County, new { id = "txtCounty", @class = "govuk-input govuk-!-width-two-thirds" })
+    </div>
+
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+            Postcode
+        </label>
+        @Html.TextBoxFor(m => m.HomeAddress.PostCode, new { id = "txtPostCode", @class = "govuk-input govuk-input--width-10" })
+    </div>
+
+</fieldset>

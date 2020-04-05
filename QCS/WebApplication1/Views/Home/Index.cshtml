@@ -1,0 +1,20 @@
+﻿@model QcsWeb.ViewModels.LightFeedbackVm
+@{
+    ViewData["Title"] = "Survey Page";
+}
+
+
+<div class="body">
+    <div class="backLinkContainer" style="display:none">
+        <a id="lnkBack" href="#" class="back-link">Back</a>
+    </div>
+    <div id="divStep">
+        <partial name="FullName" model="Model">
+    </div>
+    <div id="nextButtonContainer">
+        <button id="btnNext" type="submit" class="button next">Continue</button>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/lightSurvey.js"></script>
+}

@@ -1,0 +1,102 @@
+﻿@model QcsWeb.ViewModels.LightFeedbackVm
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+
+                <h2 class="govuk-heading-m">Personal details</h2>
+
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Name
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            @Model.FullNameVm.FullName
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a id="1" class="govuk-link-summary" href="#">
+                                Change<span class="govuk-visually-hidden"> name</span>
+                            </a>
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Address
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            @Model.HomeAddress.BuildindAndStreet<br>@Model.HomeAddress.County<br>@Model.HomeAddress.TownOrCity<br>@Model.HomeAddress.PostCode
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a id="3" class="govuk-link-summary" href="#">
+                                Change<span class="govuk-visually-hidden"> address</span>
+                            </a>
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Contact details
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">@Model.EmailVm.EmailAddress</p>
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a id="3" class="govuk-link-summary" href="#">
+                                Change<span class="govuk-visually-hidden"> contact details</span>
+                            </a>
+                        </dd>
+                    </div>
+                </dl>
+
+                <h2 class="govuk-heading-m">Survey details</h2>
+
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Is Happy?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            @Model.IsHappy
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a id="4" class="govuk-link-summary" href="#">
+                                Change<span class="govuk-visually-hidden"> Is happy</span>
+                            </a>
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Brightness Level
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            @Model.LevelOfBrightness
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                            <a id="5" class="govuk-link-summary" href="#">
+                                Change<span class="govuk-visually-hidden"> Level Of Brightness</span>
+                            </a>
+                        </dd>
+                    </div>
+                </dl>
+
+                <h2 class="govuk-heading-m">Now send your application</h2>
+
+                <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+                <div>
+                    <button id="SubmitFeedback" class="button next" data-module="govuk-button">
+                        Accept and send
+                    </button>
+                </div>
+                @Html.Hidden("HideNextButton", true)
+            </div>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,566 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 50px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+#divStep {
+    display: block;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.button {
+    background-color: #00823b;
+    position: relative;
+    display: -moz-inline-stack;
+    display: inline-block;
+    padding: 0.35em 0.5em 0.15em 0.5em;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 2px 0 #003518;
+    -moz-box-shadow: 0 2px 0 #003518;
+    box-shadow: 0 2px 0 #003518;
+    font-size: 1em;
+    line-height: 1.25;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    color: #fff;
+    color: white;
+    padding: 0.3em 0.6em 0.2em 0.6em;
+}
+
+.next {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    line-height: 1.31579;
+    font-weight: 400;
+    text-transform: none;
+    padding: 0.6em 0.8em 0.5em 0.8em;
+}
+
+button:focus {
+    outline: solid 3px #ffbf47;
+}
+
+.button:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.backLinkContainer {
+    margin-bottom: 2em;
+}
+
+.back-link {
+    border-bottom: 1px solid #0b0c0c;
+    color: #0b0c0c;
+    text-decoration: none;
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    position: relative;
+    margin-top: 15px;
+    padding-left: 14px;
+}
+
+    .back-link:before {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent;
+        -webkit-clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+        clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+        border-width: 5px 6px 5px 0;
+        border-right-color: inherit;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+
+
+
+
+
+
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark-color(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: -internal-light-dark-color(white, black);
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    height: 1.31579;
+}
+
+#divStep {
+    display: block;
+    min-height: 120px;
+}
+
+input[type="text"] {
+    padding: 20px 10px;
+    line-height: 28px;
+    font-size: 19px;
+}
+
+    input[type="text"]:focus {
+        outline: solid 3px #FFBF47;
+        border: 6px solid #0b0c0c;
+    }
+
+.govuk-input {
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    height: 2.5rem;
+    margin-top: 0;
+    padding: 5px;
+    border: 2px solid #0b0c0c;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.govuk-label {
+    font-size: 19px !important;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+}
+
+.govuk-label {
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0b0c0c;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.govuk-select {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.25 !important;
+}
+
+.govuk-select {
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px !important;
+    font-size: 1rem;
+    line-height: 1.25;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: 40px !important;
+    height: 2.5rem;
+    padding: 5px;
+    border: 2px solid #0b0c0c;
+}
+
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+
+select {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark-color(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    background-color: -internal-light-dark-color(white, black);
+    cursor: default;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    border-radius: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(169, 169, 169);
+    border-image: initial;
+}
+
+
+
+/*Summary*/
+.govuk-heading-xl, .app-prose-scope h1 {
+    margin-bottom: 50px;
+    font-size: 3rem;
+}
+
+.govuk-width-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.govuk-width-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.govuk-width-container {
+    margin-right: max(30px, calc(15px + env(safe-area-inset-right)));
+    margin-left: max(30px, calc(15px + env(safe-area-inset-left)));
+}
+
+.govuk-width-container {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.govuk-width-container {
+    max-width: 960px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+div {
+    display: block;
+}
+
+.govuk-template {
+    background-color: #f3f2f1;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+.govuk-header {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.govuk-header {
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.14286;
+    border-bottom: 10px solid #fff;
+    color: #fff;
+    background: #0b0c0c;
+}
+
+header {
+    display: block;
+}
+
+
+.govuk-heading-m, .app-contact-panel__heading, .app-prose-scope h3 {
+    margin-bottom: 15px;
+}
+
+.govuk-heading-m {
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+}
+
+.govuk-heading-m, .app-contact-panel__heading, .app-prose-scope h3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+.govuk-heading-m, .app-contact-panel__heading, .app-prose-scope h3 {
+    color: #0b0c0c;
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px !important;
+    font-size: 1.125rem;
+    line-height: 1.11111;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.govuk-\!-margin-bottom-9 {
+    margin-bottom: 60px !important;
+}
+
+.govuk-\!-margin-bottom-9 {
+    margin-bottom: 40px !important;
+}
+
+.govuk-summary-list {
+    margin-bottom: 30px;
+}
+
+.govuk-summary-list {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.govuk-summary-list {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+}
+
+.govuk-summary-list {
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px !important;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0b0c0c;
+    margin: 0;
+    margin-bottom: 50px !important;
+}
+
+
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.govuk-summary-list__row {
+    display: table-row;
+}
+
+list__key {
+    width: 30%;
+}
+
+.govuk-summary-list__key {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.govuk-summary-list__key, .govuk-summary-list__value {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.govuk-summary-list__key, .govuk-summary-list__value, .govuk-summary-list__actions {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b1b4b6;
+}
+
+.govuk-summary-list__key, .govuk-summary-list__value, .govuk-summary-list__actions {
+    display: table-cell;
+    padding-right: 20px;
+}
+
+.govuk-summary-list__key, .govuk-summary-list__value, .govuk-summary-list__actions {
+    margin: 0;
+}
+
+dt {
+    display: block;
+}
+
+.govuk-link-summary {
+    color: darkcyan;
+}
+
+
+.thanksText {
+    color: #D54783;
+    font-size: 30px;
+}
+
+.thanksText {
+    font-family: cursive;
+    color: #D54783;
+    font-size: 20px;
+}
+
+.field-validation-error {
+    color: #D4351C;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+/* Radio test*/
+
+
+html {
+    box-sizing: border-box;
+    background: #f2f2f2;
+    padding: 20px 50px
+}
+
+/* Inherit box-sizing to make it easier to change the property
+ * for components that leverage other behavior.*/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/*style form to limit width and highlight the long label*/
+form {
+    margin: 1rem auto;
+    max-width: 750px;
+}
+
+/*style wrapper to give some space*/
+.wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+    /*style label to give some more space*/
+    .wrapper label {
+        display: block;
+        padding: 12px 0 12px 48px;
+    }
+
+    /*style and hide original checkbox*/
+    .wrapper input {
+        height: 40px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 40px;
+    }
+
+        /*position new box*/
+        .wrapper input + label::before {
+            border: 2px solid;
+            content: "";
+            height: 40px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        /*radio pseudo element styles*/
+        .wrapper input + label::after {
+            content: "";
+            opacity: 0;
+            border: 10px solid;
+            border-radius: 50%;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        /*reveal check for 'on' state*/
+        .wrapper input:checked + label::after {
+            opacity: 1;
+        }
+
+        /*focus styles*/
+        .wrapper input:focus + label::before {
+            box-shadow: 0 0 0 3px #ffbf47;
+            outline: 3px solid transparent; /* For Windows high contrast mode. */
+        }

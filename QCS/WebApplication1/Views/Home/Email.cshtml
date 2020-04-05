@@ -1,0 +1,11 @@
+﻿@model QcsWeb.ViewModels.LightFeedbackVm
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<p>
+    @Html.LabelFor(m => m.EmailVm.EmailAddress)
+    @Html.TextBoxFor(m => m.EmailVm.EmailAddress, new { id = "txtEmail", @class = "govuk-input" })
+    @Html.ValidationMessageFor(m => m.EmailVm.EmailAddress)
+</p>

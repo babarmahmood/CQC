@@ -1,0 +1,23 @@
+﻿@model QcsWeb.ViewModels.LightFeedbackVm
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+        Level Of BrightNess
+    </label>
+    @Html.DropDownListFor(m => m.LevelOfBrightness, Enumerable.Range(1, 10).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { id= "listBrightness", @class = "govuk-select" })
+    @*<select class="govuk-select" id="listBrightness" name="sort">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>*@
+</div>

@@ -1,0 +1,27 @@
+﻿@model QcsWeb.ViewModels.LightFeedbackVm
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+                Are you Happy?
+            </h1>
+        </legend>
+        <div class="wrapper">
+            @*<input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">*@
+            @Html.RadioButtonFor(m => m.IsHappy, true, new { id = "IsHappy-1", @class = "govuk-radios__input" })
+            <label for="IsHappy-1">
+                Yes
+            </label>
+        </div>
+        <div class="wrapper">
+            @Html.RadioButtonFor(m => m.IsHappy, false, new {id= "IsHappy-2", @class = "govuk-radios__input" })
+            <label  for="IsHappy-2">
+                No
+            </label>
+        </div>
+    </fieldset>
+</div>
